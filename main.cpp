@@ -73,9 +73,11 @@ void writePatientsToFile(const vector<Hospital>& patients) {
         return;
     }
 
-    for (const auto& patient : patients) {
-        fileOut << patient.getName() << " | " << patient.getAddress() << " | " << patient.getBloodGrp() << " | " << patient.getAge() << endl;
-    }
+    for (size_t i = 0; i < patients.size(); ++i) {
+    const auto& patient = patients[i];
+    fileOut << patient.getName() << "," << patient.getAddress() << "," << patient.getBloodGrp() << "," << patient.getAge() << endl;
+}
+
     fileOut.close();
 }
 
@@ -184,10 +186,10 @@ int main() {
             case 3:
                 system("cls");
                 // Display all patients
-                for (const auto& patient : patients) {
-                    cout << "\t" << s << ". Name: " << patient.getName() << " | Address: " << patient.getAddress()
+                for (size_t i = 0; i < patients.size(); ++i) {
+                    const auto& patient = patients[i];
+                    cout << "\t" << i+1 << ". Name: " << patient.getName() << " | Address: " << patient.getAddress()
                          << " | Blood Group: " << patient.getBloodGrp() << endl;
-                         s++;
                 }
                 cout << endl;
                 system("pause");
