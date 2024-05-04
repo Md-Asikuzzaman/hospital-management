@@ -155,7 +155,7 @@ int main() {
         cout << "\t 4. About Us" << endl;
         cout << "\t 5. Contact Info" << endl;
         cout << "\t 6. Exit" << endl;
-        cout << "\t ====================" << endl << endl;
+        cout << "\t ===============================" << endl << endl;
 
         cout << "\t Enter your choice: ";
         cin >> userVal;
