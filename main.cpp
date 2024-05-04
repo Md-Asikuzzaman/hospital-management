@@ -62,9 +62,6 @@ vector<Hospital> readPatientsFromFile() {
     return patients;
 }
 
-
-
-
 // function to write patient data to file
 void writePatientsToFile(const vector<Hospital>& patients) {
     ofstream fileOut("patients.txt");
@@ -74,16 +71,12 @@ void writePatientsToFile(const vector<Hospital>& patients) {
     }
 
     for (size_t i = 0; i < patients.size(); ++i) {
-    const auto& patient = patients[i];
-    fileOut << patient.getName() << "," << patient.getAddress() << "," << patient.getBloodGrp() << "," << patient.getAge() << endl;
-}
+        const auto& patient = patients[i];
+        fileOut << patient.getName() << "|" << patient.getAddress() << "|" << patient.getBloodGrp() << "|" << patient.getAge() << endl;
+    }
 
     fileOut.close();
 }
-
-
-
-
 
 // function to admit a patient
 void admitPatient(vector<Hospital>& patients) {
@@ -111,8 +104,6 @@ void admitPatient(vector<Hospital>& patients) {
 
     cout << "\t Patient Data Saved Successfully!!!" << endl;
 }
-
-
 
 // function to discharge a patient
 void dischargePatient(vector<Hospital>& patients) {
@@ -144,9 +135,6 @@ void dischargePatient(vector<Hospital>& patients) {
     writePatientsToFile(patients);
 }
 
-
-
-
 int main() {
     bool isExit = false;
     vector<Hospital> patients;
@@ -164,38 +152,60 @@ int main() {
         cout << "\t 1. Admit Patient" << endl;
         cout << "\t 2. Discharge Patient" << endl;
         cout << "\t 3. See All Patients" << endl;
+        cout << "\t 4. About Us" << endl;
+        cout << "\t 5. Contact Info" << endl;
+        cout << "\t 6. Exit" << endl;
         cout << "\t ====================" << endl << endl;
 
         cout << "\t Enter your choice: ";
         cin >> userVal;
 
-
-        int s = 1;
-
         switch (userVal) {
             case 1:
                 system("cls");
                 admitPatient(patients);
-                Sleep(3000);
+                system("pause");
                 break;
             case 2:
                 system("cls");
                 dischargePatient(patients);
-                Sleep(3000);
+                system("pause");
                 break;
             case 3:
                 system("cls");
                 // Display all patients
                 for (size_t i = 0; i < patients.size(); ++i) {
                     const auto& patient = patients[i];
-                    cout << "\t" << i+1 << ". Name: " << patient.getName() << " | Address: " << patient.getAddress()
+                    cout << "\t" << i + 1 << ". Name: " << patient.getName() << " | Address: " << patient.getAddress()
                          << " | Blood Group: " << patient.getBloodGrp() << endl;
                 }
                 cout << endl;
                 system("pause");
                 break;
-            default:
+            case 4:
+                system("cls");
+                cout << "\t About Us:\n";
+                cout << "\t =========\n";
+                cout << "Welcome to our Hospital Management System, where patient care meets streamlined administration. Our platform effortlessly handles patient admission, discharge, and offers comprehensive system oversight. With intuitive features, managing patient information is efficient and accurate. Seamlessly transition patients from admission to discharge with automated workflows. Our system ensures a smooth discharge process, enhancing patient satisfaction and reducing administrative burden. Gain real-time insights into hospital operations, from bed occupancy to resource utilization. Empower informed decision-making and strategic planning with customizable reporting tools. Join us in revolutionizing hospital management with our efficient and patient-centric solution.\n";
+                cout << endl;
+                system("pause");
+                break;
+            case 5:
+                system("cls");
+                cout << "\t Contact Info:\n";
+                cout << "\t =============\n";
+                cout << "\t Hospital Name: Hospital Management System.\n";
+                cout << "\t Address: BUBT Campus \n";
+                cout << "\t Phone: +8801099-999999 \n";
+                cout << "\t Email: hms@info.com \n";
+                cout << endl;
+                system("pause");
+                break;
+            case 6:
                 isExit = true;
+                break;
+            default:
+                cout << "\t Invalid choice!" << endl;
                 break;
         }
     }
