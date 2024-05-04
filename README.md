@@ -1,6 +1,6 @@
 # Hospital Management System
 
-This is a simple Hospital Management System implemented in C++. It allows users to manage patient admission, discharge, and view patient information. The system is console-based and utilizes file I/O for data persistence.
+This is a modern Hospital Management System implemented in C++. It allows users to manage patient admission, discharge, and view patient information. The system is console-based and utilizes file I/O for data persistence.
 
 ## Features
 
