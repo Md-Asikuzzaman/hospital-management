@@ -102,7 +102,7 @@ void admitPatient(vector<Hospital>& patients) {
     // Update the file with the modified list of patients
     writePatientsToFile(patients);
 
-    cout << "\t Patient Data Saved Successfully!!!" << endl;
+    cout << "\n\t Patient Data Saved Successfully!!!\n" << endl;
 }
 
 // function to discharge a patient
@@ -177,7 +177,7 @@ int main() {
                 for (size_t i = 0; i < patients.size(); ++i) {
                     const auto& patient = patients[i];
                     cout << "\t" << i + 1 << ". Name: " << patient.getName() << " | Address: " << patient.getAddress()
-                         << " | Blood Group: " << patient.getBloodGrp() << endl;
+                         << " | Age: " << patient.getAge()  << " | Blood Group: " << patient.getBloodGrp() << endl;
                 }
                 cout << endl;
                 system("pause");
