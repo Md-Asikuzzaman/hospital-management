@@ -126,7 +126,7 @@ void dischargePatient(vector<Hospital>& patients) {
         return;
     }
 
-    cout << "\t The Patient " << patients[choice - 1].getName() << ", is Discharged!!!" << endl;
+    cout << "\n\t The Patient " << patients[choice - 1].getName() << ", is Discharged!!!\n" << endl;
 
     // Erase the discharged patient from the vector
     patients.erase(patients.begin() + choice - 1);
