@@ -193,7 +193,7 @@ int main() {
             case 5:
                 system("cls");
                 cout << "\t Contact Info:\n";
-                cout << "\t ===================\n";
+                cout << "\t ====================\n";
                 cout << "\t Hospital Name: Hospital Management System.\n";
                 cout << "\t Address: BUBT Campus \n";
                 cout << "\t Phone: +8801099-999999 \n";

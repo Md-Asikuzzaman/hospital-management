@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1714887524 source:f:\hospital-management\main.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<windows.h>
+
