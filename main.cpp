@@ -185,7 +185,7 @@ int main() {
             case 4:
                 system("cls");
                 cout << "\t About Us:\n";
-                cout << "\t =========\n";
+                cout << "\t ===================\n";
                 cout << "Welcome to our Hospital Management System, where patient care meets streamlined administration. Our platform effortlessly handles patient admission, discharge, and offers comprehensive system oversight. With intuitive features, managing patient information is efficient and accurate. Seamlessly transition patients from admission to discharge with automated workflows. Our system ensures a smooth discharge process, enhancing patient satisfaction and reducing administrative burden. Gain real-time insights into hospital operations, from bed occupancy to resource utilization. Empower informed decision-making and strategic planning with customizable reporting tools. Join us in revolutionizing hospital management with our efficient and patient-centric solution.\n";
                 cout << endl;
                 system("pause");
@@ -193,7 +193,7 @@ int main() {
             case 5:
                 system("cls");
                 cout << "\t Contact Info:\n";
-                cout << "\t =============\n";
+                cout << "\t ===================\n";
                 cout << "\t Hospital Name: Hospital Management System.\n";
                 cout << "\t Address: BUBT Campus \n";
                 cout << "\t Phone: +8801099-999999 \n";
